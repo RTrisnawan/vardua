@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    // id 'groovy' // jika Anda tidak pakai Groovy di test/main, bisa dihapus
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.2'
+    testRuntimeOnly  'org.junit.jupiter:junit-jupiter-engine:5.11.2'
+    // Jika Anda menggunakan Groovy untuk test, tambahkan:
+    // testImplementation 'org.codehaus.groovy:groovy-all:3.0.9'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
